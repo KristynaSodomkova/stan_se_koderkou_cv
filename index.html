@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kristyna Sodomkova</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapping">
+        <header class="header-main">
+            <a class="header-brand" href="">
+                about me
+            </a>
+
+            <nav class="main-nav">
+
+                <!-- <button id="mainNavToggler" class="mainNav-toggler toggler-hamburger" type="button"> 
+                        <span class="main-nav-toggler-icon"></span>
+                    </button>-->
+
+                <button id="mainNavToggler" class="mainNav-toggler toggler-hamburger" type="submit">
+                        <span class="main-nav-toggler-icon"></span>
+                    </button>
+                
+                <ul id="navlist">
+                    <li>
+                        <a href="#">experience</a>
+                    </li>
+                    <li>
+                        <a href="#">interests</a>
+                    </li>
+                    <li>
+                        <a href="#">dreams</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="section-one">
+
+                <h1>
+                    Kristyna Sodomkova
+                </h1>
+                <div class="info">
+                    <p>front-end developer</p>
+                    <div class="buttons">
+                        <p class="download-button"><a href="#">Contact me</a></p>
+                        <p><a href="#">My work gallery</a></p>
+
+                    </div>
+                </div>
+
+                <div class="aboutme">
+                    <p>
+                        Hi, I am a biginner web developer. I love challenges and learning new things. <br> I can provide with basic web pages, more of a static character. 
+                        Currently, I am gaining exprerience with JavaScript and aiming towards more interactive content. 
+                    </p>
+                </div>
+
+                <img class="phone" src="telefon.png" alt="">
+            </div>
+
+            <div class="section-two">
+
+                <div class="first-column">
+                    <p><img src="pictures/tabs.jpg" alt=""></p>
+                    <p>Front-end development</p>
+                    <p>Creation of attractive and effective websites, compatible with all types of devices.</p>
+                </div>
+                    
+                <div class="second-column">
+                    <p><img src="pictures/tabs.jpg" alt=""></p>
+                    <p>Websites maintenance</p>
+                    <p>Security prioritizing, hosting, updating.</p>
+                </div>
+
+                <div class="third-column">
+                    <p><img src="pictures/tabs.jpg" alt=""></p>
+                    <p>Focus</p>
+                    <p> HTML, CSS, JavaScript, cloud applications.</p>
+                </div>
+                
+            </div>
+        </main>
+
+
+        <footer>
+            <span class="footer-copy">
+                &copy; 2022, Kristyna Sodomkova
+            </span>
+
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            let mainNavToggler = document.querySelector('#mainNavToggler')
+            let navlist = document.querySelector('#navlist')
+
+            mainNavToggler.addEventListener('click', function (e){
+                navlist.classList.toggle('menu-show')
+
+                console.log('navbar display', getComputedStyle(navlist).display)
+
+                e.stopPropagation()
+            })
+
+            document.addEventListener('click', function () {
+
+                navlist.classList.remove('menu-show')
+            })
+
+            document.addEventListener('keydown', function (e) {
+                if (e.keyCode === 27) {
+                    // Handle escape on page by hiding the menu
+                    navlist.classList.remove('menu-show')
+                }
+            })
+
+
+        })()
+
+
+    </script>
+</body>
+
+</html>
